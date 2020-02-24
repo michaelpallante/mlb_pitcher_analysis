@@ -1,6 +1,6 @@
 # MLB Pitcher Analysis
 
-![Aaron Nola, Philadelphia Phillies Starting Pitcher](<iframe src='https://gfycat.com/ifr/YearlySlowAmericanbobtail' frameborder='0' scrolling='no' allowfullscreen width='640' height='404'></iframe><p> <a href="https://gfycat.com/yearlyslowamericanbobtail">via Gfycat</a></p>)
+![Aaron Nola, Philadelphia Phillies Starting Pitcher](https://gfycat.com/wearymajorisopod)
 <br>
 Aaron Nola, Philadelphia Phillies Starting Pitcher
 
