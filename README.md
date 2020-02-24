@@ -24,10 +24,10 @@ Former Philadelphia Phillies Closer
 
 **Notebooks:**
 <br>
-[Models]()
+[Modeling](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_modeling.ipynb)
 <br>
-[Exploratory Data Analysis]()
+[Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_eda.ipynb)
 
 **Data:**
 <br>
-[Data]()
+[Data](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/data)
