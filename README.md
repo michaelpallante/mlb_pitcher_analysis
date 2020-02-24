@@ -24,7 +24,7 @@ Former Philadelphia Phillies Closer
 
 **Notebooks:**
 <br>
-[Master Notebook]()
+[Models]()
 <br>
 [Exploratory Data Analysis]()
 
