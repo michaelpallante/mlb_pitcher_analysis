@@ -25,26 +25,42 @@ The data for this study contains all pitches that were taken by a batter (i.e., 
 
 **Reports:**
 <br>
-[Previous Work Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/previous_work_report.pdf): This report details two previous baseball projects that I have worked on that demonstrate my skills to deliver quality baseball analysis.
-<p>
-[Initial Findings Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/initial_findings_report.pdf): This report summarizes any interesting findings I discovered from the exploratory data analysis of all three pitchers and also provides a discussion on what else (i.e., types of data) could have helped me find answers for the project goals referenced earlier.
+[Previous Work Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/previous_work_report.pdf): 
+<br>
+This report details two previous baseball projects that I have worked on that demonstrate my skills to deliver quality baseball analysis.
+<br>
+[Initial Findings Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/initial_findings_report.pdf): 
+<br>
+This report summarizes any interesting findings I discovered from the exploratory data analysis of all three pitchers and also provides a discussion on what else (i.e., types of data) could have helped me find answers for the project goals referenced earlier.
 
 **Notebooks:**
 <br>
-[Pitcher 1: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher1_eda.ipynb): This notebook thoroughly examines the data gathered for Pitcher 1 and provides analysis of Pitcher 1's pitch data for both before and after the all-star break.
-<p>
-[Pitcher 2: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher2_eda.ipynb): This notebook thoroughly examines the data gathered for Pitcher 2 and provides analysis of Pitcher 2's pitch data for both before and after the all-star break.
-<p>
-[Pitcher 3: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher3_eda.ipynb): : This notebook thoroughly examines the data gathered for Pitcher 3 and provides analysis of Pitcher 3's pitch data for both before and after the all-star break.
+[Pitcher 1: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher1_eda.ipynb): 
+<br>
+This notebook thoroughly examines the data gathered for Pitcher 1 and provides analysis of Pitcher 1's pitch data for both before and after the all-star break.
+<br>
+[Pitcher 2: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher2_eda.ipynb): 
+<br>
+This notebook thoroughly examines the data gathered for Pitcher 2 and provides analysis of Pitcher 2's pitch data for both before and after the all-star break.
+<br>
+[Pitcher 3: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher3_eda.ipynb): 
+<br>
+This notebook thoroughly examines the data gathered for Pitcher 3 and provides analysis of Pitcher 3's pitch data for both before and after the all-star break.
 
 **Data Visualizations:**
 <br>
-[Data Visualizations](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/data_visualizations): This folder contains any additional data visualizations that were not shown in any of the above notebooks.
+[Data Visualizations](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/data_visualizations): 
+<br>
+This folder contains any additional data visualizations that were not shown in any of the above notebooks.
 
 **Python Files:**
 <br>
-[Python Files](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/python_files): This folder contains any python files that were used in any of the above notebooks.
+[Python Files](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/python_files): 
+<br>
+This folder contains any python files that were used in any of the above notebooks.
 
 **Data:**
 <br>
-[Data](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/data): This folder contains the data files that were used in any of the above notebooks.
+[Data](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/data): 
+<br>
+This folder contains the data files that were used in any of the above notebooks.
