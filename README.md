@@ -27,7 +27,7 @@ The data for this study contains all pitches that were taken by a batter (i.e., 
 <br>
 [Previous Work Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/previous_work_report.pdf): 
 <br>
-This report details two previous baseball projects that I have worked on that demonstrate my skills to deliver quality baseball analysis.
+This report details two previous baseball projects that I have worked on that demonstrate my ability to deliver high quality baseball analysis.
 <br>
 [Initial Findings Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/initial_findings_report.pdf): 
 <br>
