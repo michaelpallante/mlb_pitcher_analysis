@@ -26,15 +26,15 @@ The data for this study contains all pitches that were taken by a batter (i.e., 
 **Reports:**
 <br>
 [Previous Work Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/previous_work_report.pdf): This report details two previous baseball projects that I have worked on that demonstrate my skills to deliver quality baseball analysis.
-<br>
+<p>
 [Initial Findings Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/initial_findings_report.pdf): This report summarizes any interesting findings I discovered from the exploratory data analysis of all three pitchers and also provides a discussion on what else (i.e., types of data) could have helped me find answers for the project goals referenced earlier.
 
 **Notebooks:**
 <br>
 [Pitcher 1: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher1_eda.ipynb): This notebook thoroughly examines the data gathered for Pitcher 1 and provides analysis of Pitcher 1's pitch data for both before and after the all-star break.
-<br>
+<p>
 [Pitcher 2: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher2_eda.ipynb): This notebook thoroughly examines the data gathered for Pitcher 2 and provides analysis of Pitcher 2's pitch data for both before and after the all-star break.
-<br>
+<p>
 [Pitcher 3: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher3_eda.ipynb): : This notebook thoroughly examines the data gathered for Pitcher 3 and provides analysis of Pitcher 3's pitch data for both before and after the all-star break.
 
 **Data Visualizations:**
