@@ -25,11 +25,11 @@ The data for this study contains all pitches that were taken by a batter (i.e., 
 
 **Reports:**
 <br>
-[Previous Work Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/previous_work_report.pdf): 
+[Previous Work Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/Previous_Work_Report.pdf): 
 <br>
 This report details two previous baseball projects that I have worked on that demonstrate my ability to deliver high quality baseball analysis.
 <br>
-[Initial Findings Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/initial_findings_report.pdf): 
+[Initial Findings Report](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/reports/Initial_Findings_Report.pdf): 
 <br>
 This report summarizes any interesting findings I discovered from the exploratory data analysis of all three pitchers and also provides a discussion on what else (i.e., types of data) could have helped me find answers for the project goals referenced earlier.
 
