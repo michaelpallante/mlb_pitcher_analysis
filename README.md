@@ -35,17 +35,21 @@ This report summarizes any interesting findings I discovered from the explorator
 
 **Notebooks:**
 <br>
-[Pitcher 1: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher1_eda.ipynb): 
+[Pitcher 1: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/exploratory_data_analysis/mlb_pitcher_analysis_pitcher1_eda.ipynb): 
 <br>
 This notebook thoroughly examines the data gathered for Pitcher 1 and provides analysis of Pitcher 1's pitch data for both before and after the all-star break.
 <br>
-[Pitcher 2: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher2_eda.ipynb): 
+[Pitcher 2: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/exploratory_data_analysis/mlb_pitcher_analysis_pitcher2_eda.ipynb): 
 <br>
 This notebook thoroughly examines the data gathered for Pitcher 2 and provides analysis of Pitcher 2's pitch data for both before and after the all-star break.
 <br>
-[Pitcher 3: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher3_eda.ipynb): 
+[Pitcher 3: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/exploratory_data_analysis/mlb_pitcher_analysis_pitcher3_eda.ipynb): 
 <br>
 This notebook thoroughly examines the data gathered for Pitcher 3 and provides analysis of Pitcher 3's pitch data for both before and after the all-star break.
+<br>
+[Data Cleaning](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/data_cleaning/mlb_pitcher_analysis_data%20cleaning.ipynb): 
+<br>
+This notebook details the data cleaning methodology and thought process for this study.
 
 **Data Visualizations:**
 <br>
