@@ -51,7 +51,7 @@ This notebook thoroughly examines the data gathered for Pitcher 3 and provides a
 <br>
 [Data Visualizations](https://github.com/michaelpallante/mlb_pitcher_analysis/tree/master/data_visualizations): 
 <br>
-This folder contains any additional data visualizations that were not shown in any of the above notebooks.
+This folder contains any additional data visualizations that were not created within the above notebooks and needed to be imported into my notebooks.
 
 **Python Files:**
 <br>
