@@ -49,7 +49,7 @@ This notebook thoroughly examines the data gathered for Pitcher 3 and provides a
 <br>
 [Data Cleaning](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/data_cleaning/mlb_pitcher_analysis_data%20cleaning.ipynb): 
 <br>
-This notebook details the data cleaning methodology and thought process for this study.
+This notebook details the data cleaning thought process and methodology for this study.
 
 **Data Visualizations:**
 <br>
