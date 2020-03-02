@@ -16,6 +16,7 @@ Former Philadelphia Phillies Closer
 
 - Determine why Pitcher 1 struggled after the all-star break.
 - Determine why Pitchers 2 and 3 improved after the all-star break.
+- Build a predictive model of called strikes to use for improving pitching performance.
 
 ## Summary of Data:
 
