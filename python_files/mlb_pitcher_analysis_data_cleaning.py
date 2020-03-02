@@ -27,7 +27,7 @@ pd.options.display.max_columns = 100
 
 
 #Import ibp_pitcher data and create pitcher dataframe
-pitcher_df = pd.read_csv('../data/ibp_pitcher.csv')
+pitcher_df = pd.read_csv('../../data/ibp_pitcher.csv')
 
 #Overview of pitcher dataframe
 # pitcher_df
