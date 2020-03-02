@@ -19,7 +19,7 @@ Former Philadelphia Phillies Closer
 
 ## Summary of Data:
 
-The data for this study contains all pitches that were taken by a batter (i.e., ball or called strike) when thrown by one of three pitchers. Pitcher’s 1, 2, and 3 are all considered elite, high-value players across the league. In the 2019 season, Pitcher 1 had an earned run average (ERA) of 2.30 before the all-star break, followed by an ERA of 4.80 after the all-star break. Pitchers 2 and 3 posted ERA's of 3.10 and 3.30, respectively, before the all-star break. After the all-star break, Pitchers 2 and 3 posted ERA's of 1.80 and 1.44 respectively. This data was used to provide exploratory data analysis for all three pitchers and provide initial findings for the project goals listed above.
+The data for this study contains all pitches that were taken by a batter (i.e., ball or called strike) when thrown by one of three pitchers. Pitcher’s 1, 2, and 3 are all considered elite, high-value players across the league. In the 2019 season, Pitcher 1 had an earned run average (ERA) of 2.30 before the all-star break, followed by an ERA of 4.80 after the all-star break. Pitchers 2 and 3 posted ERA's of 3.10 and 3.30, respectively, before the all-star break. After the all-star break, Pitchers 2 and 3 posted ERA's of 1.80 and 1.44 respectively. This data was used to provide exploratory data analysis for all three pitchers and provide initial findings for the project goals listed above. The initial findings were used as a guide to build a predictive model of called strikes, which was identified as the response variable that could lead to improved pitching performance over the course of the baseball season (without the use of hit, strikeout, or walk data).
 
 ## Summary of Files:
 
@@ -34,6 +34,10 @@ This report details two previous baseball projects that I have worked on that de
 This report summarizes any interesting findings I discovered from the exploratory data analysis of all three pitchers and also provides a discussion on what else (i.e., types of data) could have helped me find answers for the project goals referenced earlier.
 
 **Notebooks:**
+<br>
+[Called Strikes Model](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/modeling/mlb_pitcher_analysis_modeling.ipynb): 
+<br>
+In this notebook, I built a predictive model of called strikes, which was identified as the response variable that could lead to improved pitching performance (without the use of hit, strikeout, or walk data).
 <br>
 [Pitcher 1: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/exploratory_data_analysis/mlb_pitcher_analysis_pitcher1_eda.ipynb): 
 <br>
