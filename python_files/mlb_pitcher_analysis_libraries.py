@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 # sns.set(style="whitegrid")
 # pd.options.display.max_columns = 100
 
-import seaborn as sns
 from scipy import stats
-
+import statsmodels.api as sm
+from statsmodels.stats.outliers_influence import variance_inflation_factor
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import StratifiedKFold

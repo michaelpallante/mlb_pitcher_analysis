@@ -16,8 +16,7 @@
 # get_ipython().run_line_magic('matplotlib', 'inline')
 # sns.set(style="whitegrid")
 # pd.options.display.max_columns = 100
-from libraries import *    #for use within .py file
-
+from mlb_pitcher_analysis_libraries import *    #for use within .py file
 
 # Next, we must import the ibp_pitcher data, which we will be using and manipulating throughout this study.
 
