@@ -52,7 +52,7 @@ This notebook thoroughly examines the data gathered for Pitcher 2 and provides a
 <br>
 This notebook thoroughly examines the data gathered for Pitcher 3 and provides analysis of Pitcher 3's pitch data for both before and after the all-star break.
 <br>
-[Data Cleaning](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/data_cleaning/mlb_pitcher_analysis_data%20cleaning.ipynb): 
+[Data Cleaning](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/data_cleaning/mlb_pitcher_analysis_data_cleaning.ipynb): 
 <br>
 This notebook details the data cleaning thought process and methodology for this study.
 
