@@ -12,13 +12,11 @@
 
 #Import libraries
 
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-get_ipython().run_line_magic('matplotlib', 'inline')
-sns.set(style="whitegrid")
-pd.options.display.max_columns = 100
+# get_ipython().run_line_magic('run', '../../python_files/mlb_pitcher_analysis_libraries')
+# get_ipython().run_line_magic('matplotlib', 'inline')
+# sns.set(style="whitegrid")
+# pd.options.display.max_columns = 100
+from libraries import *    #for use within .py file
 
 
 # Next, we must import the ibp_pitcher data, which we will be using and manipulating throughout this study.
@@ -90,15 +88,6 @@ pitcher_df['strike_count'] = pitcher_df['strike_count'].astype(int)
 #out_count is the total number of outs, between 0-2 outs
 pitcher_df[['baserunner_count', 'out_count', 'col_to_be_removed']] = pitcher_df.game_state.str.split(":",expand=True)
 
-#fixing the baserunner_count observations to reflect whether there are between 0-3 baserunners
-pitcher_df['baserunner_count'] = pitcher_df['baserunner_count'].str.replace('---','0').str.replace('1--','1')
-pitcher_df['baserunner_count'] = pitcher_df['baserunner_count'].str.replace('-2-','1').str.replace('--3','1')
-pitcher_df['baserunner_count'] = pitcher_df['baserunner_count'].str.replace('12-','2').str.replace('1-3','2')
-pitcher_df['baserunner_count'] = pitcher_df['baserunner_count'].str.replace('-23','2').str.replace('123','3')
-
-#fixing the out_count observations to reflect whether there are between 0-2 outs
-pitcher_df['out_count'] = pitcher_df['out_count'].str.replace('00','0').str.replace('01','1').str.replace('02','2')
-
 #created the baserunner_on_first column to indicate if there is a baserunner on first base
 pitcher_df['baserunner_on_first'] = pitcher_df['baserunner_count'].astype(str).map({'---': 0, '1--': 1, '-2-': 0,
                                                                                     '--3': 0, '12-': 1, '1-3': 1,
@@ -111,6 +100,15 @@ pitcher_df['baserunner_on_second'] = pitcher_df['baserunner_count'].astype(str).
 pitcher_df['baserunner_on_third'] = pitcher_df['baserunner_count'].astype(str).map({'---': 0, '1--': 0, '-2-': 0,
                                                                                     '--3': 1, '12-': 0, '1-3': 1,
                                                                                     '-23': 1, '123': 1})
+
+#fixing the baserunner_count observations to reflect whether there are between 0-3 baserunners
+pitcher_df['baserunner_count'] = pitcher_df['baserunner_count'].str.replace('---','0').str.replace('1--','1')
+pitcher_df['baserunner_count'] = pitcher_df['baserunner_count'].str.replace('-2-','1').str.replace('--3','1')
+pitcher_df['baserunner_count'] = pitcher_df['baserunner_count'].str.replace('12-','2').str.replace('1-3','2')
+pitcher_df['baserunner_count'] = pitcher_df['baserunner_count'].str.replace('-23','2').str.replace('123','3')
+
+#fixing the out_count observations to reflect whether there are between 0-2 outs
+pitcher_df['out_count'] = pitcher_df['out_count'].str.replace('00','0').str.replace('01','1').str.replace('02','2')
 
 #created individual variables for whether a pitch resulted in a ball or strike called
 pitcher_df['result_ball'] = pitcher_df['pitch_result'].astype(str).map({'ball': 1, 'called_strike': 0})
@@ -139,7 +137,7 @@ pitcher_df['pitch_type_SL'] = pitcher_df['pitch_type'].astype(str).map({'CB': 0,
 pitcher_df = pitcher_df.drop(['bs_count', 'game_state', 'col_to_be_removed'], axis = 1)
 
 #create .csv file of pitcher_df and save it to the data folder
-# pitcher_df.to_csv('../data/pitcher_df.csv')
+# pitcher_df.to_csv('../../data/pitcher_df.csv')
 
 
 # We were able to separate the bs_count column into two new columns: ball_count and strike_count. Ball_count is the number of balls in the count, between 0-3 balls. Strike_count is the number of strikes in the count, between 0-2 strikes. We also needed to change ball_count and strike_count values to integers.
@@ -171,17 +169,17 @@ pitcher_df = pitcher_df.drop(['bs_count', 'game_state', 'col_to_be_removed'], ax
 #create dataframe of pitcher 1's data only
 pitcher1 = pitcher_df[pitcher_df.pitcherid == 1]
 #create .csv file of pitcher1 dataframe and save it to the data folder
-# pitcher1.to_csv('../data/pitcher1.csv')
+# pitcher1.to_csv('../../data/pitcher1.csv')
 
 #create dataframe of pitcher 2's data only
 pitcher2 = pitcher_df[pitcher_df.pitcherid == 2]
 #create .csv file of pitcher2 dataframe and save it to the data folder
-# pitcher2.to_csv('../data/pitcher2.csv')
+# pitcher2.to_csv('../../data/pitcher2.csv')
 
 #create dataframe of pitcher 3's data only
 pitcher3 = pitcher_df[pitcher_df.pitcherid == 3]
 #create .csv file of pitcher3 dataframe and save it to the data folder
-# pitcher3.to_csv('../data/pitcher3.csv')
+# pitcher3.to_csv('../../data/pitcher3.csv')
 
 
 # We have created the following three dataframes: pitcher1, pitcher2, and pitcher3. Pitcher1 examines all pitch data for Pitcher 1 only. Pitcher2 examines all pitch data for Pitcher 2 only. Pitcher3 examines all pitch data for Pitcher 3 only.
@@ -211,9 +209,102 @@ pitcher3 = pitcher_df[pitcher_df.pitcherid == 3]
 # 
 # We also notice that some spin_rate observations are missing in each of our three pitcher dataframes. These are such low numbers that we have no problem also keeping these rows. These rows also do not need to be removed, as the other columns in these rows still contain valuable information that we do not want to discard.
 # 
-# Lastly, we do notice that there are 30 pitch_type observations missing within our pitcher3 dataframe (and as a result, we are missing 30 observations each of pitch_type_CB, pitch_type_CH, pitch_type_CT, pitch_type_FF, pitch_type_FT, and pitch_type_SL). This is not too worrisome either, as it is such a miniscule percentage of observations compared to the total number of observations in the dataframe. These rows also do not need to be removed, as the other columns in these rows still contain valuable information that we do not want to discard. However, given that we know pitch_type will be one of our most used variables in further evaluation, we do need to be mindful that in some areas, we will be missing these 30 observations.
+# Lastly, we do notice that there are 30 pitch_type observations missing within our pitcher3 dataframe (and as a result, we are missing 30 observations each of pitch_type_CB, pitch_type_CH, pitch_type_CT, pitch_type_FF, pitch_type_FT, and pitch_type_SL). This is not too worrisome either, as it is such a miniscule percentage of observations compared to the total number of observations in the dataframe. These rows also do not need to be removed, as the other columns in these rows still contain valuable information that we do not want to discard. However, given that we know pitch_type will be one of our most used variables in further evaluation, we do need to be mindful that in some areas, we will be missing these 30 observations. 
 # 
-# With that being said, our data cleaning process is now complete and we can move on to exploratory data analysis for each of the three pitchers we are evaluating. Below are links to each of the three pitchers' exploratory data analysis notebooks:
+# It is also important to note that this is our approach for the exploratory data analysis only. For modeling, we will need to deal with these missing values. Since there is such a small number of observations missing in these columns, we can justify removing them for modeling purposes, as we have a sufficient amount of information for our models and do not want to create any bias through imputation methods.
+
+# ### Training and Test Dataset Creation
+# 
+# We split our pitcher dataframes using a 80%-20% training and test split. We also randomized the selection of observations so that we did not bias the data. We completed this process for all three pitcher dataframes. These training and test datasets for each pitcher will be used for modeling purposes.
+
+# In[9]:
+
+
+# Split pitcher dataframes into train and test datasets using a randomized 80/20 split for each
+
+#train and test datasets for Pitcher 1 called strikes model
+#drop rows with missing values in pitcher1 dataframe
+pitcher1_model_data = pitcher1.dropna()
+#create .csv file of pitcher1 model dataframe and save it to the data folder
+# pitcher1_model_data.to_csv('../../data/pitcher1_model_data.csv')
+#result_strike is the response variable of the model
+pitcher1_called_strikes = pitcher1_model_data['result_strike']
+#drop any columns that will not be used as feature variables in the model
+pitcher1_features = pitcher1_model_data.drop(['bats', 'throws', 'pitch_result', 'pitcherid', 'result_ball', 
+                                              'pitch_type', 'result_strike', 'all_star', 'pitch_type_FT'], axis = 1)
+#create the train and test datasets
+x_train_pitcher1, x_test_pitcher1, y_train_pitcher1, y_test_pitcher1 = train_test_split(pitcher1_features, 
+                                                                                        pitcher1_called_strikes, 
+                                                                                        test_size = 0.2, 
+                                                                                        random_state = 10)
+x_train_pitcher1 = x_train_pitcher1.reset_index(drop=True)
+x_test_pitcher1 = x_test_pitcher1.reset_index(drop=True)
+y_train_pitcher1 = y_train_pitcher1.reset_index(drop=True)
+y_test_pitcher1 = y_test_pitcher1.reset_index(drop=True)
+#create .csv files of pitcher1 training and test datasets and save them to the data folder
+# x_train_pitcher1.to_csv('../../data/x_train_pitcher1.csv')
+# x_test_pitcher1.to_csv('../../data/x_test_pitcher1.csv')
+# y_train_pitcher1.to_csv('../../data/y_train_pitcher1.csv')
+# y_test_pitcher1.to_csv('../../data/y_test_pitcher1.csv')
+
+
+#train and test datasets for Pitcher 2 called strikes model
+#drop rows with missing values in pitcher2 dataframe
+pitcher2_model_data = pitcher2.dropna()
+#create .csv file of pitcher2 model dataframe and save it to the data folder
+# pitcher2_model_data.to_csv('../../data/pitcher2_model_data.csv')
+#result_strike is the response variable of the model
+pitcher2_called_strikes = pitcher2_model_data['result_strike']
+#drop any columns that will not be used as feature variables in the model
+pitcher2_features = pitcher2_model_data.drop(['bats', 'throws', 'pitch_result', 'pitcherid', 'result_ball', 
+                                              'pitch_type', 'result_strike', 'all_star', 'pitch_type_CT'], axis = 1)
+#create the train and test datasets
+x_train_pitcher2, x_test_pitcher2, y_train_pitcher2, y_test_pitcher2 = train_test_split(pitcher2_features, 
+                                                                                        pitcher2_called_strikes, 
+                                                                                        test_size = 0.2, 
+                                                                                        random_state = 10)
+x_train_pitcher2 = x_train_pitcher2.reset_index(drop=True)
+x_test_pitcher2 = x_test_pitcher2.reset_index(drop=True)
+y_train_pitcher2 = y_train_pitcher2.reset_index(drop=True)
+y_test_pitcher2 = y_test_pitcher2.reset_index(drop=True)
+#create .csv files of pitcher2 training and test datasets and save them to the data folder
+# x_train_pitcher2.to_csv('../../data/x_train_pitcher2.csv')
+# x_test_pitcher2.to_csv('../../data/x_test_pitcher2.csv')
+# y_train_pitcher2.to_csv('../../data/y_train_pitcher2.csv')
+# y_test_pitcher2.to_csv('../../data/y_test_pitcher2.csv')
+
+
+#train and test datasets for Pitcher 3 called strikes model
+#drop rows with missing values in pitcher3 dataframe
+pitcher3_model_data = pitcher3.dropna()
+#create .csv file of pitcher3 model dataframe and save it to the data folder
+# pitcher3_model_data.to_csv('../../data/pitcher3_model_data.csv')
+#result_strike is the response variable of the model
+pitcher3_called_strikes = pitcher3_model_data['result_strike']
+#drop any columns that will not be used as feature variables in the model
+pitcher3_features = pitcher3_model_data.drop(['bats', 'throws', 'pitch_result', 'pitcherid', 'result_ball', 
+                                              'pitch_type', 'result_strike', 'all_star', 'pitch_type_CT'], axis = 1)
+#create the train and test datasets
+x_train_pitcher3, x_test_pitcher3, y_train_pitcher3, y_test_pitcher3 = train_test_split(pitcher3_features, 
+                                                                                        pitcher3_called_strikes, 
+                                                                                        test_size = 0.2, 
+                                                                                        random_state = 10)
+x_train_pitcher3 = x_train_pitcher3.reset_index(drop=True)
+x_test_pitcher3 = x_test_pitcher3.reset_index(drop=True)
+y_train_pitcher3 = y_train_pitcher3.reset_index(drop=True)
+y_test_pitcher3 = y_test_pitcher3.reset_index(drop=True)
+#create .csv files of pitcher3 training and test datasets and save them to the data folder
+# x_train_pitcher3.to_csv('../../data/x_train_pitcher3.csv')
+# x_test_pitcher3.to_csv('../../data/x_test_pitcher3.csv')
+# y_train_pitcher3.to_csv('../../data/y_train_pitcher3.csv')
+# y_test_pitcher3.to_csv('../../data/y_test_pitcher3.csv')
+
+
+# Our data cleaning process is now complete and we can move on to exploratory data analysis for each of the three pitchers we are evaluating.
+
+# ### Exploratory Data Analysis
+# 
+# Below are links to review each of the three pitchers' exploratory data analysis notebooks:
 # 
 # - [Pitcher 1: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher1_eda.ipynb): 
 # <br> This notebook thoroughly examines the data gathered for Pitcher 1 and provides analysis of Pitcher 1's pitch data for both before and after the all-star break.
@@ -221,3 +312,7 @@ pitcher3 = pitcher_df[pitcher_df.pitcherid == 3]
 # <br> This notebook thoroughly examines the data gathered for Pitcher 2 and provides analysis of Pitcher 2's pitch data for both before and after the all-star break.
 # - [Pitcher 3: Exploratory Data Analysis](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/mlb_pitcher_analysis_pitcher3_eda.ipynb): 
 # <br> This notebook thoroughly examines the data gathered for Pitcher 3 and provides analysis of Pitcher 3's pitch data for both before and after the all-star break.
+
+# ### Modeling
+# 
+# To view a predictive model of called strikes for each pitcher, please review the [Modeling](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/modeling/mlb_pitcher_analysis_modeling.ipynb) notebook.
