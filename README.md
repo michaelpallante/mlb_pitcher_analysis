@@ -34,6 +34,12 @@ This report details two previous baseball projects that I have worked on that de
 <br>
 This report summarizes any interesting findings I discovered from the exploratory data analysis of all three pitchers and also provides a discussion on what else (i.e., types of data) could have helped me find answers for the project goals referenced earlier.
 
+**Presentation:**
+<br>
+[Presentation Slides](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/presentation/mlb_pitcher_analysis_presentation_slides.pdf):
+<br>
+These slides were used for the presentation of this project.
+
 **Notebooks:**
 <br>
 [Called Strikes Model](https://github.com/michaelpallante/mlb_pitcher_analysis/blob/master/notebooks/modeling/mlb_pitcher_analysis_modeling.ipynb): 
